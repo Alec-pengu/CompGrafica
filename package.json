@@ -4,3 +4,15 @@
     "tailwindcss": "^4.0.10"
   }
 }
+
+module.exports = {
+  content: [
+      './index.html',
+      './src/**/*.js',
+      './src/**/*.css',
+  ],
+  theme: {
+      extend: {},
+  },
+  plugins: [],
+};
