@@ -1,6 +1,6 @@
 const items = document.querySelectorAll('[data-carousel-item]');
 let currentIndex = 0;
-const intervalTime = 3000;
+const intervalTime = 6000;
 let autoPlayInterval;
 
 const evolutions = {
