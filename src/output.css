@@ -56,10 +56,9 @@
     --default-mono-font-feature-settings: var(
       --font-mono--font-feature-settings
     );
-    --default-mono-font-variation-settings: var(
-      --font-mono--font-variation-settings
-    );
-  }
+--default-mono-font-variation-settings: var(
+  --font-mono--font-variation-settings
+);
 }
 @layer base {
   *, ::after, ::before, ::backdrop, ::file-selector-button {
@@ -141,7 +140,6 @@
   }
   img, svg, video, canvas, audio, iframe, embed, object {
     display: block;
-    vertical-align: middle;
   }
   img, video {
     max-width: 100%;
@@ -409,6 +407,7 @@
     display: block;
     -webkit-box-orient: horizontal;
     -webkit-line-clamp: unset;
+    line-clamp: unset;
   }
   .block {
     display: block;
@@ -2126,9 +2125,7 @@
     --tw-outline-style: solid;
     outline-style: solid;
   }
-  .\[default\:\\u202F\$\{N\(\`\$\{u\}\`\)\}\] {
-    default: \u202F${N(`${u}`)};
-  }
+  /* Removed empty ruleset */
   .backface-hidden {
     backface-visibility: hidden;
   }
