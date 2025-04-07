@@ -4,15 +4,15 @@ const intervalTime = 3000;
 let autoPlayInterval;
 
 const evolutions = {
-    0: { video: '/videos/evolve.webm', evolvedImage: '/img/gen4/grotle.webp' },
-    1: { video: '/videos/evolve.webm', evolvedImage: '/img/gen4/monferno.webp' },
-    2: { video: '/videos/evolve.webm', evolvedImage: '/img/gen4/prinplup.webp' }
+    0: { video: './videos/evolve.webm', evolvedImage: './img/gen4/grotle.webp' },
+    1: { video: './videos/evolve.webm', evolvedImage: './img/gen4/monferno.webp' },
+    2: { video: './videos/evolve.webm', evolvedImage: './img/gen4/prinplup.webp' }
 };
 
 const evolutions2 = {
-    0: { video: '/videos/evolve.webm', evolvedImage2: '/img/gen4/torterra.webp' },
-    1: { video: '/videos/evolve.webm', evolvedImage2: '/img/gen4/infernape.webp' },
-    2: { video: '/videos/evolve.webm', evolvedImage2: '/img/gen4/empoleon.webp' }
+    0: { video: './videos/evolve.webm', evolvedImage2: './img/gen4/torterra.webp' },
+    1: { video: './videos/evolve.webm', evolvedImage2: './img/gen4/infernape.webp' },
+    2: { video: './videos/evolve.webm', evolvedImage2: './img/gen4/empoleon.webp' }
 };
 
 function updateCarousel(index) {
@@ -128,7 +128,7 @@ document.getElementById('reset').addEventListener('click', () => {
     document.body.appendChild(videoContainer);
 
     const video = document.createElement('video');
-    video.src = '/videos/evolve.webm'; // Ruta del video de reinicio
+    video.src = './videos/evolve.webm'; // Ruta del video de reinicio
     video.autoplay = true;
     video.controls = false;
     video.classList.add('w-full', 'max-w-2xl', 'h-auto');
@@ -138,7 +138,7 @@ document.getElementById('reset').addEventListener('click', () => {
         videoContainer.remove();
 
         if (img) {
-            img.src = `/img/gen4/${originalImage}`; // Restaurar la imagen original
+            img.src = `./img/gen4/${originalImage}`; // Restaurar la imagen original
             img.alt = originalImage.split('.')[0]; // Actualizar el atributo alt
             img.alt = img.alt.charAt(0).toUpperCase() + img.alt.slice(1); // Capitaliza el nombre
         }
