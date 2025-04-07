@@ -87,12 +87,16 @@ function handleEvolution() {
         const currentItem = items[currentIndex];
         const img = currentItem.querySelector('img');
         if (img) {
-            if (img.src.includes(evolutions[currentIndex].evolvedImage)) {
-                img.src = evolutionData2.evolvedImage2;
-                img.alt = evolutionData2.evolvedImage2.split('/').pop().split('.')[0];
+            const currentSrc = img.src;
+
+            if (currentSrc.includes(evolutions[currentIndex].evolvedImage.split('/').pop())) {
+                // Si está en la primera evolución, pasa a la segunda
+                img.src = evolutions2[currentIndex].evolvedImage2;
+                img.alt = evolutions2[currentIndex].evolvedImage2.split('/').pop().split('.')[0];
             } else {
-                img.src = evolutionData.evolvedImage;
-                img.alt = evolutionData.evolvedImage.split('/').pop().split('.')[0];
+                // Si está en el estado base, pasa a la primera evolución
+                img.src = evolutions[currentIndex].evolvedImage;
+                img.alt = evolutions[currentIndex].evolvedImage.split('/').pop().split('.')[0];
             }
 
             img.alt = img.alt.charAt(0).toUpperCase() + img.alt.slice(1); // Capitaliza el nombre
@@ -156,7 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
     startAutoPlay(); // Inicia el autoplay
 });
 
-
 // Event listeners
 document.getElementById('prevBtn').addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + items.length) % items.length;
@@ -171,7 +174,6 @@ document.getElementById('nextBtn').addEventListener('click', () => {
     updatePokemonName();
     startAutoPlay();
 });
-
 
 document.querySelector('.text-gray-900').addEventListener('click', handleEvolution);
 
