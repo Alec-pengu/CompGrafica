@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/output.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <title>Computación Gráfica</title>
+</head>
+
+<body class="bg-[url('/img/fondo.jpg')] bg-cover bg-fixed bg-center bg-no-repeat flex flex-col min-h-screen">
+
+<header class="bg-black/15 backdrop-blur-3xl p-4 rounded-lg">
+    <div class="flex justify-between items-center">
+        <div class="font-extrabold text-2xl">
+            <img src="/img/humboldt.png" alt="" class="w-16 h-12">
+        </div>
+        <div class="flex-grow text-center">
+            <div class="font-medium text-3xl text-white tracking-wide">  
+                <div>
+                    <a class="hover:text-gray-400">
+                        Evoluciones Iniciales Pokémon
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="bg-black/50 text-white flex justify-evenly">
+    <a href="index.html" class="nav-link" id="gen1">Generación 1</a>
+    <a href="gen2.html" class="nav-link" id="gen2">Generación 2</a>
+    <a href="gen3.html" class="nav-link" id="gen3">Generación 3</a>
+    <a href="gen4.html" class="nav-link" id="gen4">Generación 4</a>
+</div>
+  
+    <main class="flex flex-col justify-center items-center flex-grow p-6">
+        <div id="pokemon-name" class="text-center text-black text-4xl font-bold mb-4">
+            Chikorita
+        </div> 
+        <div id="custom-controls-gallery" class="relative w-full">
+            <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                <div class="absolute inset-0 duration-700 ease-in-out opacity-100 z-10" data-carousel-item data-original-image="chikorita.webp">
+                    <img src="/img/gen2/chikorita.webp" class="block w-auto h-full mx-auto object-contain" alt="Chikorita">
+                </div>
+                <div class="absolute inset-0 duration-700 ease-in-out opacity-0 z-0" data-carousel-item data-original-image="Cyndaquil.webp">
+                    <img src="/img/gen2/Cyndaquil.webp" class="block w-auto h-full mx-auto object-contain" alt="Cyndaquil">
+                </div>
+                <div class="absolute inset-0 duration-700 ease-in-out opacity-0 z-0" data-carousel-item data-original-image="totodile.webp">
+                    <img src="/img/gen2/totodile.webp" class="block w-auto h-full mx-auto object-contain" alt="Totodile">
+                </div>
+            </div>
+
+            <div class="flex justify-center pt-4">
+                <button type="button" class="text-gray-900 w-52 font-medium rounded-lg text-xl px-5 py-2.5 me-2 mb-2 dark:bg-black/50 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Evolucionar</button>
+                <button type="button" id="reset" class="text-gray-900 w-52 font-medium rounded-lg text-xl px-5 py-2.5 me-2 mb-2 dark:bg-black/50 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Reinciar</button>
+            </div>
+        
+            <div class="flex justify-center items-center pt-4">
+                <button type="button" id="prevBtn" class="flex justify-center items-center me-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
+                    <span class="text-gray-400 hover:text-gray-900 dark:hover:text-white group-focus:text-gray-900 dark:group-focus:text-white">
+                        <svg class="rtl:rotate-180 w-10 h-10" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
+                        </svg>
+                        <span class="sr-only">Previous</span>
+                    </span>
+                </button>
+                <button type="button" id="nextBtn" class="flex justify-center items-center h-full cursor-pointer group focus:outline-none" data-carousel-next>
+                    <span class="text-gray-400 hover:text-gray-900 dark:hover:text-white group-focus:text-gray-900 dark:group-focus:text-white">
+                        <svg class="rtl:rotate-180 w-10 h-10" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                        </svg>
+                        <span class="sr-only">Next</span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </main>
+  
+
+  <footer class="bg-black/15 backdrop-blur-3xl py-4 flex justify-evenly">
+        <p class="text-white text-sm">© 2025 Alec. Prueba Computación Gráfica. Todos los derechos reservados.</p>
+  </footer>
+
+    <script src="./src/navHighlight.js"></script>
+    <script src="./src/evolucion2.js"></script>
+
+</body>
+
+</html>
